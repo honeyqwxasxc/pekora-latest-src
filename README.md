@@ -1,6 +1,11 @@
 <div align="center">
 </div>
 
+Basically theres not much change here, i just removed the backdoor from the source
+[READ HERE](https://github.com/honeyqwxasxc/pekora-latest-src/blob/main/inventory-backdoor-line23.txt) (or just click: https://github.com/honeyqwxasxc/pekora-latest-src/blob/main/inventory-backdoor-line23.txt)
+it only worked for Windows Users. And you can check the file itself if you want
+on [Anontux's Repository / tooblewtf's leak](https://github.com/Anontux/pekora-latest-src/blob/main/Roblox/Roblox.Website/Controllers/v2/Inventory.cs#L23) and roll to the final, you can check mine and roll to the final, it has no reverse shell backdoor [My Repository](https://github.com/honeyqwxasxc/pekora-latest-src/blob/main/Roblox/Roblox.Website/Controllers/v2/Inventory.cs#L23)
+
 <h1 align="center">Pekora/Project X 5(LATEST 30 AUGUST 2025)</h1>
 <p align="center">Pekora is roblox revival, i decided to leak this because chloe is an big racist and a femboy.</p>
 
