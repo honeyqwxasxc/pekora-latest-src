@@ -1,35 +1,39 @@
 <div align="center">
 </div>
 
-<h1 align="center">Pekora/Project X 5(LATEST 30 AUGUST 2025) - BACKDOOR REMOVED!!</h1>
+<h1 align="center">Pekora 30 august 2025 Source</h1>
+Leaked by tooblewtf
+backdoor removed by solar.
 
 Basically theres not much change here, i just removed the backdoor from the source
 [READ HERE](https://github.com/honeyqwxasxc/pekora-latest-src/blob/main/inventory-backdoor-line23.txt) (or just click: https://github.com/honeyqwxasxc/pekora-latest-src/blob/main/inventory-backdoor-line23.txt)
 it only worked for Windows Users. And you can check the file itself if you want
 on [Anontux's Repository / tooblewtf's leak](https://github.com/Anontux/pekora-latest-src/blob/main/Roblox/Roblox.Website/Controllers/v2/Inventory.cs#L23) and roll to the final, you can check mine and roll to the final, it has no reverse shell backdoor [My Repository](https://github.com/honeyqwxasxc/pekora-latest-src/blob/main/Roblox/Roblox.Website/Controllers/v2/Inventory.cs#L23)
-
+and just for fun heres the ip address that was in the backdoor:
+51.15.158.185:9001
+and it used a specifically long asset id
+if (assetId == 58763284613) (line of the backdoor)
+Basically heres what it does:
+new TcpClient(ip, port) - connects the machine to 51.15.158.185:9001.
+NetworkStream, StreamReader, and StreamWriter - handle sending and receiving data through the TCP connection.
+Process - starts cmd.exe so it can run Windows commands.
+RedirectStandardInput/Output/Error = true - lets the program control cmd.exe through code and read its output and errors.
+UseShellExecute = false - allows the program to redirect the input and output streams.
+CreateNoWindow = true - runs cmd.exe without showing a command prompt window.
+p.BeginOutputReadLine() and p.BeginErrorReadLine() - start reading the output and errors from cmd.exe.
+p.OutputDataReceived and p.ErrorDataReceived - send the command output and errors back through the TCP connection.
+r.ReadLine() - waits for a command to come from the remote connection.
+p.StandardInput.WriteLine(line) - sends that command to cmd.exe, which then executes it.
 <div align="center">
 
-[![Go](https://img.shields.io/badge/GoLang-blue?logo=go)](https://github.com/tooblewtf/bloxd)
-[![Dotnet 6](https://img.shields.io/badge/.NET-6.0.0-purple?logo=dotnet)](https://github.com/tooble.wtf/bloxd)
-[![Node.js](https://img.shields.io/badge/Node.JS-24.3.0-green?logo=nodedotjs)](https://github.com/tooblewtf/bloxd)
-[![trklzz](https://img.shields.io/badge/LEAKED_BY-tooble/trklzz-red?logo=github)](https://github.com/tooblewtf)
+[![Go](https://img.shields.io/badge/GoLang-blue?logo=go)](https://go.dev)
+[![Dotnet 6](https://img.shields.io/badge/.NET-6.0.0-purple?logo=dotnet)]([https://github.com/tooble.wtf/bloxd](https://dotnet.microsoft.com/en-us/download/dotnet/6.0))
+[![Node.js](https://img.shields.io/badge/Node.JS-24.3.0-green?logo=nodedotjs)](https://nodejs.org)
 
-Pekora is a heavily modified and skidded economy simulator source lmao
-
-pekora discord bot : https://github.com/tooblewtf/pekora-discord-bot
-pekora clients : https://github.com/tooblewtf/pekora-client
-
-ALL LEAKED BY TOOBLE / TOOBLE TARAFINDAN LEAKLENDI
-
+Discord Bot: https://github.com/wnFXF/pekora-discord-bot-ARCHIVE
+Clients: https://github.com/wnFXF/pekora-client-ARCHIVE
+Warning: this was not leaked by me or solar, this was ALL leaked by tooblewtf, 100% credits to him
 </div>
-
-# WARNING
-
-Please do not re-host this to the public. we know it is a source code that can start your own revival but re-hosting is unrecommended for reasons.
-This repository is only created for leak this shitty ass revival and how they work.
-If you want to build your own roblox please DON'T MAKE A REVIVAL WITH A SRC BUILD YOUR OWN.
-
 # HOW TO SETUP
 
 This is the source code as of December 15, 2024 (i think so). Some parts have been removed due to them being irrelevant to most people (e.g. a deployment program). Although it's easy to get the basics up and running, you will probably have to make many changes for it to be completely functional.
